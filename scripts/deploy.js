@@ -1,7 +1,7 @@
 // Fluxo: (predeploy já fez o build) -> pede a mensagem -> commit + push na main -> publica dist no gh-pages
 import { execFileSync } from 'node:child_process'
 import { createInterface } from 'node:readline/promises'
-import { promisify } from 'node:util'
+import process from 'node:process'
 import ghpages from 'gh-pages'
 
 const git = (...args) => execFileSync('git', args, { stdio: 'inherit' })
@@ -22,5 +22,5 @@ if (hasChanges) {
 }
 
 git('push')
-await promisify(ghpages.publish)('dist')
+await ghpages.publish('dist')
 console.log('Publicado em https://guilherme-codr.github.io/Lumina/')
