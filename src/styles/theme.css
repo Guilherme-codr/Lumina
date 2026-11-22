@@ -1,0 +1,24 @@
+/* Tokens de design (Tailwind v4: @theme gera utilitários como bg-primary, text-accent, font-serif) */
+@theme {
+  --color-bg-primary: #FAFAF8;
+  --color-bg-secondary: #F3F1EC;
+  --color-primary: #0F2C38;
+  --color-primary-hover: #1A4354;
+  --color-accent: #C5A059;
+  --color-accent-light: #DFC389;
+  --color-text-main: #1E293B;
+  --color-text-muted: #64748B;
+  --color-border-subtle: #E2DFD7;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Aliases com os nomes originais, para uso em CSS puro */
+:root {
+  --bg-primary: var(--color-bg-primary);
+  --bg-secondary: var(--color-bg-secondary);
+  --text-main: var(--color-text-main);
+  --text-muted: var(--color-text-muted);
+  --border-subtle: var(--color-border-subtle);
+}
